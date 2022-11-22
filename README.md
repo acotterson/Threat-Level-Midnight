@@ -43,17 +43,17 @@
  ![image alt text](./public/images/screencapture-localhost-3001-2022-09-29-14_47_37.png)
 
   ## Description
-  Web application to see if your PC can play the games you want, Comapares your current pc specs to game requirements and gives you pass check if your system meets the requirements before you buy the game.
+  Web application to see if your PC can play the games you want. Compares your current pc specs to game requirements and gives you a pass check if your system meets the requirements before you buy the game.
 
 
 
   ## Installation
-  Clone repo install node, run npm i and then launch application using node server, go to localhost:3001 and browse.  Or our live webpage at unplayable.herokuapp.com.
+  Clone repo, install node, run npm i, and then launch application using node server. Navigate to localhost:3001 and browse.  Aternatively, visit the live webpage at unplayable.herokuapp.com.
 
 
 
   ## Usage
-  Register an account, and update your profile with your computers specs, cpu, gpu and ram, it will take these values and compare to games on steam and let you know if your computer can run them, search for a game and click the card of the game you wish to play and it will compare your computers specs to the game specs recommended. 
+  Register an account and update your profile with your computer's specs, cpu, gpu and ram. These values will be taken into account and compared to game descriptions on Steam and let you know if your computer can run them. Search for a game and click the card of the game you wish to play and it will compare your computer's specs to the game's recommended and minimum specs. Currently popular games are shown by default.
 
 
  
@@ -68,7 +68,7 @@
   Published under the [MIT](license.txt) License.
   
 
-  Read More about the licence by clicking this Link: [MIT](https://opensource.org/licenses/MIT).
+  Read more about the license by clicking this link: [MIT](https://opensource.org/licenses/MIT).
  
 
   ## Tests
