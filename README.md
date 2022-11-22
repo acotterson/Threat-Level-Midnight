@@ -9,7 +9,7 @@
 
   </div>
   <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=nvmax&style=flat-square&color=blue" alt=""/>
+  <img src="https://komarev.com/ghpvc/?username=acotterson&style=flat-square&color=blue" alt=""/>
   </div>
   
   
@@ -58,10 +58,8 @@
 
  
   ## Contribute
-  ![GitHub license](https://img.shields.io/badge/Made%20by-%40nvmax-blue)
   [Contributor Covenant](https://www.contributor-covenant.org/)
 
-  At this time owner is not accepting any contributions to this project.
 
 
 
