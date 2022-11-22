@@ -48,7 +48,7 @@
 
 
   ## Installation
-  Clone repo, install node, run npm i, and then launch application using node server. Navigate to localhost:3001 and browse.  Aternatively, visit the live webpage at unplayable.herokuapp.com.
+  Clone repo, install node, run npm i, and then launch application using node server. Navigate to localhost:3001 and browse.  Aternatively, visit the live webpage at [unplayable.herokuapp.com](http://unplayable.herokuapp.com/).
 
 
 
