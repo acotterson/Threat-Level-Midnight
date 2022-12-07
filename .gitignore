@@ -1,3 +1,16 @@
 node_modules
+package-lock.json
 .env
 Os.js
+alec.js
+alec2.js
+specRecommends.json
+validIds.txt
+steam_data.json
+crap.json
+index2.js
+.DS_Store
+UserGames.js
+steamold.js
+steamRoutes2.js
+connection.js

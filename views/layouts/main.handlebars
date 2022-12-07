@@ -1,12 +1,40 @@
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link rel='stylesheet' type='text/css' href='/css/jass.css' />
-    <title>Document</title>
-  </head>
-  <body>
-    {{{body}}}
-  </body>
-</html
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href='/css/normalize.css' />
+  <link rel='stylesheet' type='text/css' href='/css/style.css' />
+  <link rel='stylesheet' type='text/css' href='/css/searchpage.css' />
+  <link rel='stylesheet' type='text/css' href='/css/login-signup.css' />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Roboto:wght@300&display=swap");
+  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <title>Unplayable</title>
+</head>
+
+<body>
+  <nav></nav>
+  <section class='link'>
+    {{#if logged_in}}
+    <a href='/'>Home </a>
+    <a href='/search'>Search </a>
+    <a id="logout" href='/'>Logout </a>
+    {{else}}
+    <a href='/'>Home </a>
+    <a href='/login'>Login </a>
+    <a href='/register'>Register </a>
+    {{/if}}
+  </section>
+  {{{body}}}
+
+  {{#if logged_in}}
+  <script src='/js/logout.js'></script>
+  {{/if}}
+</body>
+
+</html>

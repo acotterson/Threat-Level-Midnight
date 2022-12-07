@@ -1,0 +1,148 @@
+<section class="search-showcase">
+  <div class="search-header">
+    <h2>Search for a game!</h2>
+  </div>
+  <div class="search-bar-btn">
+    <form id="search" class="search-form">
+      <input
+        id="search-input"
+        class="search-input"
+        type="text"
+        placeholder="Search.."
+      />
+      <button class="search-btn" type="submit">Search</button>
+    </form>
+
+  </div>
+</section>
+
+<div class="search-page-container">
+  <div class="searched-games-container">
+    <section class="main-card-container">
+      <div class="spinner"></div>
+      {{#each game as |games|}}
+
+        <div class="card-img-container">
+          <img
+            onerror="this.style.display='none';this.parentElement.remove()"
+            class="card"
+            src="https://cdn.akamai.steamstatic.com/steam/apps/{{appid}}/header.jpg"
+          />
+          <div class="card-title-container">
+            <p class="card-title">{{name}}</p>
+          </div>
+        </div>
+      {{else}}
+        <div class="no-game-container">
+          <h4>No games found, Please try again.</h4>
+        </div>
+
+      {{/each}}
+    </section>
+  </div>
+</div>
+
+<div class="search-page-container">
+  <div class="card-section-container">
+    <h2 class="card-section-title">Top 20 Games In The Last Week</h2>
+  </div>
+  <section class="main-card-container">
+    <div class="spinner"></div>
+    {{#each top20 as |t20|}}
+      <div class="card-img-container" data-appid="{{appid}}">
+        <img
+          class="card"
+          data-appid="{{appid}}"
+          src="https://cdn.akamai.steamstatic.com/steam/apps/{{appid}}/capsule_616x353.jpg"
+        />
+        <div class="card-title-container" data-appid="{{appid}}">
+          <p class="card-title">{{name}}</p>
+        </div>
+      </div>
+    {{else}}
+      <div class="no-game-container">
+        <h4>No games found, Please try again.</h4>
+      </div>
+    {{/each}}
+  </section>
+</div>
+
+<div class="modal">
+  <div class="modCard">
+    <div class="modFlex">
+      <div class="modImg"></div>
+      <h1 id="modName"></h1>
+      <center>
+        <h3 id="modDate"></h3>
+      </center>
+    </div>
+    <div class="modFlex">
+      <p id="description"></p>
+      <p id="recommended"></p>
+      <p id="minimum"></p>
+      <p id="website"></p>
+    </div>
+    <div style="justify-content: center;">
+      <p>CPU Minimum: <span id="cpuStatusMin"></span></p>
+
+      <p>GPU Minimum: <span id="gpuStatusMin"></span></p>
+
+      <p>Ram Minimum: <span id="ramStatusMin"></span></p>
+
+      <p>CPU Recommended: <span id="cpuStatusRec"></span></p>
+
+      <p>GPU Recommended: <span id="gpuStatusRec"></span></p>
+
+      <p>Ram Recommended: <span id="ramStatusRec"></span></p>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="profileToggle">click to toggle profile</div>
+
+<section id="userProfile">
+  <h1 id="uname">username</h1>
+  <h3 id="email">Email</h3>
+
+  <form id="manageDevices1">
+    <button type="button" class="manageButton" id="manageButton">add or update
+      device</button>
+  </form>
+  <form id="manageDevices2">
+    <input type="checkbox" id="desktop" name="desktop" value="desktop" />
+    <label for="desktop"> Desktop </label>
+
+    <input type="checkbox" id="laptop" name="laptop" value="laptop" />
+    <label for="laptop"> Laptop </label>
+
+    <select id="RAM" name="ram">
+      <option value="none" selected disabled hidden>select your RAM size</option>
+      <option value="4">4 GB</option>
+      <option value="8">8 GB</option>
+      <option value="16">16 GB</option>
+      <option value="32">32 GB</option>
+      <option value="64">64 BG</option>
+      <option value="128">128 GB</option>
+    </select>
+
+    <label for="CPU">CPU:</label><br />
+    <input type="text" id="CPU" name="CPU" />
+
+    <label for="GPU">GPU:</label><br />
+    <input type="text" id="GPU" name="GPU" />
+
+    <button type="button" class="manageButton" id="submitDevice">submit</button>
+  </form>
+
+  <h4>device information</h4>
+  <ul>
+    <li id="profileRAM"><b>Ram Size:</b> ##GB</li>
+    <li id="profileCPU"><b>CPU ID:</b> ##</li>
+    <li id="profileGPU"><b>GPU ID:</b> ##</li>
+  </ul>
+</section>
+
+<script src="/js/search.js"></script>
+<script src="/js/profile.js"></script>

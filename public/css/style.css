@@ -1,0 +1,474 @@
+:root {
+    --MainColor: rgba(10, 26, 57, 1);
+    --AltColor: rgba(138, 111, 128, 1);
+    --Neut1Color: rgba(194, 181, 177, 1);
+    --Neut2Color: rgba(175, 177, 160, 1);
+    --AdventFont: 'Advent Pro', sans-serif;
+    --RobotoFont: 'Roboto', sans-serif;
+}
+
+/*--- navigation header ---*/
+nav {
+    background-color: var(--MainColor);
+    position: fixed;
+    top: -50px;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 998;
+    transform: skewY(2deg);
+}
+
+.link {
+    position: fixed;
+    top: 25px;
+    right: 10px;
+    z-index: 999;
+    display: inline;
+    width: 100%;
+    text-align: right;
+    letter-spacing: 1px;
+    font-family: var(--AdventFont);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.link a {
+    color: var(--Neut2Color);
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/*--- index image / content ---*/
+header {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url('../images/desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.flexCont {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.homepage-logo {
+    width: 500px;
+}
+
+header h2 {
+    font-family: var(--RobotoFont);
+    color: var(--Neut2Color);
+    font-size: 25px;
+}
+
+header h6 {
+    cursor: pointer;
+    font-family: var(--AdventFont);
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+header a {
+    color: var(--Neut1Color);
+}
+
+/*--- mission statement / about us ---*/
+#mission {
+    border: 1px solid #fff;
+    color: var(--MainColor);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('../images/keyboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -30px 0;
+    transform: skewY(2deg);
+}
+
+.missionContent {
+    width: 80%;
+    margin: 200px auto;
+    font-family: var(--RobotoFont);
+    font-size: 20px;
+    text-align: justify;
+    transform: skewY(-2deg);
+}
+
+#mission h1 {
+    font-family: var(--AdventFont);
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+/*--- footer code ---*/
+footer {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    padding: 20px 10px;
+    border: 1px solid var(--MainColor);
+    background-color: var(--MainColor);
+    color: var(--Neut1Color);
+    transform: skewY(2deg);
+    z-index: 900;
+}
+
+.footerContent {
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--MainColor);
+    background-color: var(--MainColor);
+    padding: 20px 10px;
+    margin-top: 35px;
+    font-family: var(--RobotoFont);
+    font-size: 20px;
+    text-align: justify;
+    color: var(--Neut1Color);
+    z-index: 901;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.footerFlex {
+    text-align: center;
+    width: 45%;
+    flex: 1;
+}
+
+.footerFlex .footer-logo {
+    width: 330px;
+}
+
+.footerFlex a {
+    color: var(--AltColor);
+}
+
+.footerFlex b {
+    color: var(--Neut2Color);
+    font-size: 15px;
+}
+
+.footerFlex p {
+    color: var(--Neut2Color);
+    font-family: var(--AdventFont);
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.contributor {
+    font-family: var(--RobotoFont);
+    font-size: 15px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/*--- modal / popup with more info about the selected game ---*/
+.modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.modCard {
+    background-image: url('https://via.placeholder.com/150');
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
+    padding: 15px;
+    width: 80%;
+    max-height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.modFlex {
+    width: 45%;
+    height: 90%;
+    flex: 1;
+}
+
+.modImg {
+    background-image: url('https://via.placeholder.com/150');
+    width: 80%;
+    min-height: 200px;
+    background-size: cover;
+    margin: 30px auto;
+}
+
+.modCard h1 {
+    font-family: var(--AdventFont);
+    font-size: 40px;
+    color: var(--Neut1Color);
+    text-shadow: 0 0 5px #000;
+}
+
+.modCard h3 {
+    width: fit-content;
+    font-family: var(--AdventFont);
+    font-size: 20px;
+    color: var(--Neut1Color);
+    text-shadow: 0 0 5px #000;
+    border: 2px solid var(--Neut1Color);
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+.modCard b {
+    font-family: var(--RobotoFont);
+    font-size: 20px;
+    color: var(--Neut1Color);
+    text-shadow: 0 0 5px #000;
+    margin: 0 10px;
+    display: inline;
+}
+
+.modCard P {
+    font-family: var(--RobotoFont);
+    font-size: 18px;
+    color: var(--Neut1Color);
+    line-height: 130%;
+    text-align: justify;
+    padding: 40px 10px 10px 10px;
+}
+
+#warning {
+    color: darkred;
+    font-family: var(--AdventFont);
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/*--- user profile w/ toggle ---*/
+
+#profileToggle {
+    position: fixed;
+    top: 5px;
+    left: 50px;
+    font-family: var(--AdventFont);
+    color: var(--AltColor);
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 17px;
+    padding: 5px;
+    z-index: 999;
+}
+
+#profileToggle:hover {
+    background-color: var(--Neut1Color);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+#userProfile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #e0e0e0;
+    color: var(--MainColor);
+    box-shadow: 0px 0px 10px;
+    padding: 50px 10px;
+    visibility: hidden;
+}
+
+#userProfile h1 {
+    font-family: var(--AdventFont);
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 160%;
+    text-align: right;
+}
+
+#userProfile h3 {
+    font-family: var(--RobotoFont);
+    font-size: 18px;
+    line-height: 100%;
+    text-align: right;
+}
+
+#userProfile h4 {
+    text-align: left;
+    font-family: var(--AdventFont);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 140%;
+    border-bottom: 1px solid var(--MainColor);
+}
+
+#userProfile ul,
+#userProfile ol {
+    text-align: left;
+    font-size: 17px;
+    font-family: var(--RobotoFont);
+}
+
+#userProfile ul li,
+#userProfile ol li {
+    line-height: 140%;
+}
+
+#userProfile ul li b,
+#userProfile ol li b {
+    font-family: var(--RobotoFont);
+    font-weight: bold;
+}
+
+/* --- manage devices form --- */
+#manageDevices1,
+#manageDevices2 {
+    width: 100%;
+    font-family: var(--AdventFont);
+    color: var(--MainColor);
+    font-weight: bold;
+}
+
+.manageButton {
+    font-size: 25px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+#manageDevices2 {
+    display: none;
+}
+
+#manageDevices label {
+    width: 40%;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+#manageDevices input {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#CPU,
+#GPU,
+#RAM {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/* larger devices */
+@media screen and (max-width: 992px) {
+    .modFlex {
+        min-width: 45%;
+    }
+}
+
+/* medium devices */
+@media screen and (max-width: 768px) {
+    .footerFlex {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .footerContent {
+        flex-flow: column;
+        width: 94%;
+        padding: 20px 0;
+    }
+
+    .footerFlex .footer-logo {
+        width: 100%;
+    }
+
+    .modCard {
+        flex-flow: column;
+        width: 94%;
+        max-height: 94%;
+        overflow: auto;
+        margin: 2%;
+    }
+
+    .modFlex {
+        padding: 1%;
+        margin: 1%;
+        width: 96%;
+    }
+
+    .modCard h1 {
+        font-size: 25px;
+    }
+
+    .modCard h3 {
+        font-size: 15px;
+    }
+}
+
+/* small devices */
+@media screen and (max-width: 576px) {
+    .footerFlex {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .footerContent {
+        flex-flow: column;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .footerFlex .footer-logo {
+        width: 100%;
+    }
+
+    .modCard {
+        flex-flow: column;
+        width: 94%;
+        max-height: 94%;
+        overflow: auto;
+        margin: 2%;
+    }
+
+    .modFlex {
+        padding: 1%;
+        margin: 1%;
+        width: 96%;
+    }
+
+    .homepage-logo {
+        width: 350px;
+    }
+
+    .modCard h1 {
+        font-size: 25px;
+    }
+
+    .modCard h3 {
+        font-size: 15px;
+    }
+}

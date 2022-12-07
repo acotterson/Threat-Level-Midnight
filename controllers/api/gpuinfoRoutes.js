@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, GpuInfo, CpuInfo } = require('../../models');
+const { Op } = require("sequelize");
 
 // GET /api/gpuinfo
 router.get('/', async (req, res) => {
@@ -26,7 +27,26 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+// uses string to return gpu matches
+router.get('/search/:terms', async (req, res) => {
+    try {
+        const gpuinfoData = await GpuInfo.findAll({
 
+            where: {
+                gpu: {
+                    [Op.like]: `%${req.params.terms}`,
+                }
+            }
+        });
+        if (!gpuinfoData) {
+            res.status(404).json({ message: 'No gpuinfo found with this id!' });
+            return;
+        }
+        res.status(200).json(gpuinfoData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 // put /api/gpuinfo/
 router.put('/', async (req, res) => {
@@ -57,7 +77,6 @@ router.post('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 // delete route for gpu
 router.delete('/:id', async (req, res) => {
