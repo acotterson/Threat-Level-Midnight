@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Unplayable",
   "main": "server.js",
-  "engines": {
-    "node": "19.0.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node seeds/seed.js",
@@ -31,7 +28,7 @@
     "jquery": "^3.6.1",
     "module": "^1.2.5",
     "mysql2": "^2.3.3",
-    "node": "^16.18.1",
+    "node": "^18.10.0",
     "os": "^0.1.2",
     "request": "^2.88.2",
     "sequelize": "^6.22.0",
